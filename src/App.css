@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: "Poppins", sans-serif;
+	background-color: #08aeea;
+	background-image: linear-gradient(60deg, #2af598 0%, #08aeea 100%);
+}
+form {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	flex-wrap: wrap;
+}
+input {
+	padding: 10px;
+	border: none;
+	width: 500px;
+	border: 10px;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+	background-color: transparent;
+	color: #fee140;
+	outline: none;
+	font-weight: 800;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input > button {
+	padding: 10px;
+	border-radius: 3px;
+	background-color: #fee140;
+	border: none;
+	color: black;
+	font-size: 14px;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.recipe-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search span {
+	color: #fee140;
+	font-weight: 900;
 }
-
-.App-link {
-  color: #61dafb;
+.search .special {
+	color: whitesmoke;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 700px) {
+	form {
+		justify-content: center;
+	}
+	input {
+		width: 100%;
+	}
+	.input > button {
+		width: 100%;
+	}
 }
